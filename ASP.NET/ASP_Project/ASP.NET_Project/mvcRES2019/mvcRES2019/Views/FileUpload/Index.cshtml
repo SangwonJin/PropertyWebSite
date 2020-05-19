@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Upload Files -Step 1</h2>
+@using (Html.BeginForm("Index", "FileUpload", FormMethod.Post,
+    new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.TextBox("file", "", new { type = "file" })
+        <input type="submit" value="Save Files" />
+        @ViewBag.Msg <br />
+        @ViewBag.Type <br />
+        @Html.ActionLink("Move Files", "MoveFile");
+    </div>
+}

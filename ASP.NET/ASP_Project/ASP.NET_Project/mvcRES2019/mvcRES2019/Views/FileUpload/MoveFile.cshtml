@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Approve/Move Image File";
+}
+
+<h2>Approve and Move Image File</h2>
+@using (Html.BeginForm("MoveFile", "FileUpload", FormMethod.Post))
+{
+    @Html.DropDownList("myList", ViewBag.myList as SelectList)
+    <input type="submit" value="display" />
+}
+@ViewBag.Msg
+

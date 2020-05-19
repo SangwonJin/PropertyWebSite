@@ -1,0 +1,302 @@
+﻿@model mvcRES2019.Models.Agent
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Autherize","Login",FormMethod.Post))
+{
+
+    <!doctype html>
+    <html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+              integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/Content/styles.css">
+        <title>UI!</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light m-0">
+                <img src="~/Content/BigDream.png" class="img-responsive navbar-brand ml-3" alt="Cinque Terre" width="240" height="150">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"></div>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav" style="font-size:xx-large; margin-right:20rem;">
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link" style="font-size:large">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#property" class="nav-link" style="font-size:large">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#promotion" class="nav-link" style="font-size:large">Promotion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#agent" class="nav-link" style="font-size:large">Agent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link" style="font-size:large">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" value="" />
+                        <label>Password</label>
+                        <input type="text" name="name" value="" />
+                        <button type="submit" class="my-2 my-lg-0 btn btn-primary">@Html.ActionLink("Login", "index", "Agents", null, new { @class = "text-white" })</button>
+                    </div>
+                    <p>Hello</p>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container-fluid p-0">
+                <div class="site-content">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-column">
+                            <h1 class="site-title" style="text-align:center; margin-bottom:30px;">Home is where the heart is</h1>
+                            <p class="site-desc" style="margin-bottom:20px;margin-left:20px;"></p>
+
+                            <div class="d-flex flex-row">
+                                <div style="margin-bottom:40px;">
+
+                                    <form>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control col-lg-10 col-xs-12 " id="location" size="70" placeholder="Location">
+
+                                            <button type="button" class="btn btn-danger col-lg-2  col-xs-12" size="20" id="search">Search</button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="section-1 m-0">
+                <div class="container text-center">
+                    <p id="property" class="heading-1 display-1">
+                        Properties
+                    </p>
+                    <div id="portfolio" class="container-fluid text-center bg-grey">
+                        <h2>Make your dream here</h2><br>
+                        <div class="row text-center slideanim">
+                            <div class=" col-sm-4">
+                                <div class="thumbnail">
+                                    <img src="~/Content/Stock/background_edited.png" alt="Paris" width="300" height="300" id="x">
+                                    <p><strong>Paris</strong></p>
+                                    <p>Yes, we built Paris</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="thumbnail">
+                                    <img src="~/Content/Stock/background_edited.png" alt="New York" width="300" height="300" id="y">
+                                    <p><strong>New York</strong></p>
+                                    <p>We built New York</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="thumbnail">
+                                    <img src="~/Content/Stock/background_edited.png" alt="San Francisco" width="300" height="300" id="z">
+                                    <p><strong>San Francisco</strong></p>
+                                    <p>Yes, San Fran is ours</p>
+                                </div>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-1 m-0">
+                <div class="container text-center">
+                    <p id="promotion" class="heading-1 display-1">
+                        Promotions
+                    </p>
+                    <div id="portfolio" class="container-fluid text-center bg-grey">
+                        <h2>Deal is not always here!. Please check them out below now</h2><br>
+                        <div class="row text-center slideanim">
+                            <div class=" col-sm-4">
+                                <div class="thumbnail">
+                                    <img src="~/Content/Stock/background_edited.png" alt="Paris" width="300" height="300" id="x">
+                                    <p><strong>Paris</strong></p>
+                                    <p>Yes, we built Paris</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="thumbnail">
+                                    <img src="~/Content/Stock/background_edited.png" alt="New York" width="300" height="300" id="y">
+                                    <p><strong>New York</strong></p>
+                                    <p>We built New York</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="thumbnail">
+                                    <img src="~/Content/Stock/background_edited.png" alt="San Francisco" width="300" height="300" id="z">
+                                    <p><strong>San Francisco</strong></p>
+                                    <p>Yes, San Fran is ours</p>
+                                </div>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="d-flex flex-row">
+                                <i class="fas fa-question fa-3x m-2"></i>
+                                <div class="d-flex flex-column">
+                                    <h3 class="m-2">24/7 Support</h3>
+                                    <p class="m-2">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex flex-row">
+                                <i class="fas fa-seedling fa-3x m-2"></i>
+                                <div class="d-flex flex-column">
+                                    <h3 class="m-2">Reasonable Price</h3>
+                                    <p class="m-2">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex flex-row">
+                                <i class="fas fa-rocket fa-3x m-2"></i>
+                                <div class="d-flex flex-column">
+                                    <h3 class="m-2">Trust</h3>
+                                    <p class="m-2">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-4">
+                            <div class="d-flex flex-row">
+                                <i class="fas fa-user-shield fa-3x m-2"></i>
+                                <div class="d-flex flex-column">
+                                    <h3 class="m-2">Ahthorized</h3>
+                                    <p class="m-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex flex-row">
+                                <i class="fas fa-search fa-3x m-2"></i>
+                                <div class="d-flex flex-column">
+                                    <h3 class="m-2">Marketing</h3>
+                                    <p class="m-2">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex flex-row">
+                                <i class="fas fa-sliders-h fa-3x m-2"></i>
+                                <div class="d-flex flex-column">
+                                    <h3 class="m-2">Marketing</h3>
+                                    <p class="m-2">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-4 bg-dark" id="agent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 ">
+                            <img src="~/Content/Stock/background_edited.png" id="pic" alt="Image-7" width="500">
+                        </div>
+                        <div class="col-md-3 ">
+                            <h1 class="text-white mb-9">TOP AGENTS</h1>
+                            <a href="#">Connect with them</a>
+                            <p class="para-1">They have got a reputation for their professional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="section-5 text-center" id="contact">
+                <h4 class="m-5">If you need any help, provide your email</h4>
+                <div class="form-inline justify-content-center">
+                    <input type="text" name="Email" id="email" placeholder="Email" size="40" class="form-control px-4 py-2">
+                    <input type="button" value="Contact Us" class="btn btn-danger px-4 py-2" style="height:33px">
+                </div>
+                <div class="social" style="margin-top: 5%;">
+                    <div class="d-flex flex-row justify-content-center">
+                        <i class="fab fa-facebook m-2"></i>
+                        <i class="fab fa-twitter m-2"></i>
+                        <i class="fab fa-instagram m-2"></i>
+                        <i class="fab fa-youtube m-2"></i>
+                    </div>
+                </div>
+                <hr>
+                <h5 style="color:lightseagreen;">2019 &copy;</h5>
+            </div>
+        </footer>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.sr = ScrollReveal({ duration: 1000 });
+            sr.reveal('.site-content .d-flex');
+            sr.reveal('.section-1 .card');
+            sr.reveal('.section-2 .d-flex');
+            sr.reveal('.section-3 .col-md-4');
+            sr.reveal('.section-4 .col-md-7, .col-md-5')
+        </script>
+    </body>
+
+</html>
+
+}
+

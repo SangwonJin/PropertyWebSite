@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "MoveFileDisplay";
+}
+
+<h2>@ViewBag.Msg</h2>
+
+@if (String.IsNullOrEmpty(ViewBag.Msg))
+{
+    <h2>Move File Display</h2>
+    <h3>How does this look?</h3>
+
+    <img src="~/tempImages/@ViewBag.fileName" alt="@ViewBag.fileName" />
+
+    using (Html.BeginForm("ApproveFile", "FileUpload", FormMethod.Post))
+    {
+        <input type="hidden" name="fileToApprove" value="@ViewBag.fileName" />
+        <label>Looks Good:</label>
+        <input type="radio" name="looks" value="good" />
+        <br />
+        <label>Look Bad:</label>
+        <input type="radio" name="looks" value="bad" />
+        <br />
+
+        <input type="submit" value="Submit" />
+    }
+
+}
+@Html.ActionLink("MoveFiles", "MoveFile")
